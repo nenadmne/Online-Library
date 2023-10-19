@@ -1,0 +1,24 @@
+.dashboard-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 7.5rem 4rem 2rem 2rem;
+  grid-gap: 2rem;
+  animation: blur 0.5s ease forwards;
+}
+
+.right-side {
+  width: 45%;
+  min-width: 550px;
+}
+
+@media (max-width: 1400px) {
+  .right-side {
+    width: 45%;
+    min-width: 400px;
+  }
+
+  .dashboard-wrapper {
+    padding: 7.5rem 2rem;
+  }
+}

@@ -1,0 +1,11 @@
+.multimedia-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 2rem;
+  list-style: none;
+}
+
+.multimedia-wrapper img {
+  width: 12rem;
+}

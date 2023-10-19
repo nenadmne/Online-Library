@@ -1,0 +1,10 @@
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  padding: 6.5rem 2rem 2rem 2rem;
+  gap: 2rem;
+}
+
+.table-wrapper {
+  animation: slide-up-fade-in 0.5s ease-in forwards;
+}

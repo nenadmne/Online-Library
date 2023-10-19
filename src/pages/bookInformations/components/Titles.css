@@ -1,0 +1,32 @@
+.title-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0 1rem 2rem;
+  gap: 1rem;
+  border-bottom: 1px solid var(--grey-200);
+  width: 100%;
+}
+
+.title-bar-wrapper h1 {
+  margin: 0;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  white-space: nowrap;
+}
+
+.active-page,
+.title-bar-wrapper a:hover {
+  background-color: var(--grey-200);
+  border-radius: 1rem;
+}
+
+.active-evidence-link {
+  background-color: var(--grey-200);
+  border-radius: 1rem;
+}
+
+@media(max-width:1400px) {
+  .title-bar-wrapper h1{
+    font-size: 1rem;
+  }
+}

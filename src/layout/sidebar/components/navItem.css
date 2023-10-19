@@ -1,0 +1,24 @@
+.navLink{
+    padding: 1.2rem 0;
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    width: 100%;
+}
+
+.navLink:hover{
+    background-color: rgb(211, 211, 211);
+    opacity: .8;
+    cursor: pointer;
+}
+.navLink.active{
+    background-color: rgb(211, 211, 211);
+    opacity: .8;
+}
+.icon{
+    font-size: 1.5rem;
+}
+.navLink.active svg{
+    color:  var(--primary);
+}

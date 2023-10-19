@@ -1,0 +1,149 @@
+.table-container {
+  height: fit-content;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(128, 128, 128, 0.527);
+  width: 100%;
+  min-width: calc(1400px - 7rem);
+  animation: glow 1s ease-in;
+}
+.linkCell {
+  cursor: pointer;
+}
+.linkCell:hover {
+  color: blue;
+}
+.table-container tr {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.table-container td,
+.table-container th {
+  border: 1px solid var(--grey-200);
+  padding: 1rem 1.5rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  white-space: wrap;
+}
+
+.table-container td {
+  /* justify-content: space-between; */
+  position: relative;
+}
+
+.table-container th {
+  background-color: var(--grey-100);
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+th input,
+td input {
+  margin-right: 1rem;
+}
+
+.table-container tr:not(:last-child):hover {
+  background-color: var(--grey-100);
+}
+
+.arrow {
+  cursor: pointer;
+  margin-left: 1rem;
+  font-size: 1.25rem;
+}
+
+.arrow:hover {
+  scale: 1.2;
+}
+
+.dots,
+.main-header-dots {
+  font-size: 1.2rem;
+}
+
+.dots:hover,
+.main-header-dots:hover {
+  cursor: pointer;
+  scale: 1.2;
+}
+
+.table-checkbox {
+  display: flex;
+  flex-direction: row;
+  gap: 0.1rem;
+}
+
+.category-search {
+  width: 100%;
+  outline: none;
+  border: 0;
+  margin: 0;
+}
+
+.category-search::placeholder {
+  color: var(--grey-200);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.left-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-container a:hover {
+  color: var(--primary) !important;
+  font-weight: 500;
+}
+
+.blank-case {
+  text-align: center;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+}
+
+.dots {
+  margin-left: auto;
+}
+
+.modalItemChange {
+  padding: 5px 10px;
+  min-width: 150px;
+  font-size: 12px;
+}
+
+.table-confirm-modal {
+  background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+@media (max-width: 1400px) {
+  .table-container {
+    min-width: unset;
+  }
+
+  .table-container tbody tr {
+    margin: 0;
+  }
+
+  .table-container td,
+  .table-container th {
+    padding: 0.5rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .arrow {
+    margin-left: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .category-search::placeholder {
+    font-size: 0.7rem;
+  }
+}

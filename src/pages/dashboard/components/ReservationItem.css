@@ -1,0 +1,37 @@
+.reservation-item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--grey-900);
+  font-size: 0.85rem;
+}
+.student-info,
+.book {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  width: 30%;
+  white-space: noWrap;
+  overflow: hidden;
+}
+
+.student-info img {
+  border-radius: 50%;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.status {
+  display: flex;
+  flex-direction: row;
+  gap: 0.6rem;
+}
+
+.status svg {
+  cursor: pointer;
+}
+
+.status svg:hover {
+  opacity: 0.7;
+}

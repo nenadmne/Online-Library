@@ -1,0 +1,110 @@
+.flexItem {
+  display: flex;
+  align-items: center;
+}
+
+.header {
+  position: fixed;
+  font-weight: 500;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  font-size: 1.5rem;
+  background-color: var(--primary);
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 3;
+}
+
+.bell {
+  width: 46px;
+  height: 46px;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #606fc7;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.border {
+  border-right: 1px solid var(--black);
+  padding: 1px;
+  height: 3rem;
+}
+.bild {
+  padding: 0 1rem;
+  color: var(--white);
+  margin: 0;
+}
+
+.online-library {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+  background-color: rgb(63, 81, 181);
+  padding: 0 2rem;
+}
+
+.online-library span,
+.online-library svg {
+  color: var(--white);
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.modalBox {
+  cursor: pointer;
+  /* position: relative; */
+}
+.modalHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-modal {
+  position: absolute;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: left;
+  right: 20rem;
+  background-color: var(--white);
+}
+
+.profile-modal {
+  position: absolute;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 5px;
+  background-color: var(--white);
+  color: var(--black);
+  text-align: left;
+  right: 3rem;
+  bottom: -5rem;
+  background-color: var(--white);
+}
+
+@media (max-width: 1400px) {
+  .header {
+    width: 100vw;
+    min-width: unset;
+  }
+
+  .profile-modal {
+    bottom: -3rem;
+  }
+}

@@ -1,0 +1,60 @@
+.table-control {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-width: calc(1400px - 7rem);
+  height: fit-content;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1rem 0 2rem 0;
+}
+
+.table-global-search {
+  width: 14rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 0;
+}
+
+.table-global-search input {
+  border: 0;
+  outline: none;
+  padding: 0;
+}
+
+.input-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  gap: 0.5rem;
+}
+
+.search-icon {
+  font-size: 1.4rem;
+}
+
+.btn.btn-primary {
+  width: 12rem;
+}
+
+@media (max-width: 1400px) {
+  .table-control {
+    min-width: unset;
+  }
+
+  .table-global-search {
+    width: 10rem;
+  }
+
+  .form-control {
+    font-size: 0.8rem;
+  }
+
+  .btn.btn-primary {
+    padding: 0.25rem 0;
+    width: 12rem;
+    font-size: 0.8rem;
+  }
+}
