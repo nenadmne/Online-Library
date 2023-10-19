@@ -65,7 +65,7 @@ export default function Login() {
               />
             </label>
             <label htmlFor="password" className="login-input">
-              <FaLock className="icon" />
+              <FaLock className="login-icon" />
               <input
                 ref={passwordRef}
                 placeholder="Password"
