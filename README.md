@@ -55,7 +55,7 @@ Please be aware that this project is still under development, and some features 
 
 #### Librarian Credentials
 
-- Username: librarian
+- Username: bibliotekar
 - Password: password
 
 You can use the provided credentials to log in and explore the available features. Keep in mind that this is a testing environment, and changes may occur during the development process.
