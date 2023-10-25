@@ -10,7 +10,8 @@ import Modal from "../../modal/Modal";
 import ModalItem from "../../modal/modalItem/ModalItem";
 
 const BellModalBox = ({ changeModal, modalPlus, setModalClose }) => {
-
+  const token = localStorage.getItem("token");
+  const role = localStorage.getItem("role") === "Administrator";
   return (
     <div className="bell modalBox">
       <FaPlus onClick={changeModal} />
@@ -20,12 +21,14 @@ const BellModalBox = ({ changeModal, modalPlus, setModalClose }) => {
           setModalClose={setModalClose}
           component={
             <div>
-              <ModalItem
-                icon={<FaRegAddressBook />}
-                text={"Bibliotekar"}
-                path="/librarians/new"
-                setModalClose={setModalClose}
-              />
+              {token && role && (
+                <ModalItem
+                  icon={<FaRegAddressBook />}
+                  text={"Bibliotekar"}
+                  path="/librarians/new"
+                  setModalClose={setModalClose}
+                />
+              )}
               <ModalItem
                 icon={<FaUsers />}
                 text={"Ucenik"}

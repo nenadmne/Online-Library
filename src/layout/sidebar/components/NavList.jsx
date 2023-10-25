@@ -10,9 +10,13 @@ import {
 import NavItem from "./NavItem";
 
 const NavList = ({ isOpen, route, setClose }) => {
+  const role = localStorage.getItem("role");
+
   const navItems = [
-    { path: "dashboard", text: "Dashborad", icon: <FaTachometerAlt /> },
-    { path: "librarians", text: "Bibliotekari", icon: <FaAddressBook /> },
+    { path: "dashboard", text: "Dashboard", icon: <FaTachometerAlt /> },
+    role === "Administrator"
+      ? { path: "librarians", text: "Bibliotekari", icon: <FaAddressBook /> }
+      : null, 
     { path: "students", text: "Ucenici", icon: <FaUsers /> },
     { path: "books", text: "Knjige", icon: <FaCopy /> },
     { path: "authors", text: "Autori", icon: <FaAddressBook /> },
@@ -21,7 +25,7 @@ const NavList = ({ isOpen, route, setClose }) => {
       text: "Izdavanje Knjiga",
       icon: <FaExchangeAlt />,
     },
-  ];
+  ].filter(Boolean);
 
   return (
     <>

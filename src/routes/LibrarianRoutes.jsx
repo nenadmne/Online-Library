@@ -6,11 +6,11 @@ import EditLibrarian from "../pages/librarians/EditLibrarian";
 import LibrarianProfile, {
   LibrarianProfileLoader,
 } from "../pages/librarianProfile/LibrarianProfile";
-import PrivateRoute from "../privateRoutes/PrivateRoute";
+import AdminRoute from "../privateRoutes/AdminRoute";
 
 const librarianRoutes = (
   <Fragment>
-    <Route path="/librarians" element={<PrivateRoute />}>
+    <Route path="/librarians" element={<AdminRoute />}>
       <Route
         path="/librarians"
         element={<Librarians />}
@@ -18,10 +18,10 @@ const librarianRoutes = (
         errorElement={true}
       />
     </Route>
-    <Route path="/librarians/new" element={<PrivateRoute />}>
+    <Route path="/librarians/new" element={<AdminRoute />}>
       <Route path="/librarians/new" element={<NewLibrarian />} />
     </Route>
-    <Route path="/librarians/:id" element={<PrivateRoute />}>
+    <Route path="/librarians/:id" element={<AdminRoute />}>
       <Route
         path="/librarians/:id"
         element={<LibrarianProfile />}
@@ -29,7 +29,7 @@ const librarianRoutes = (
         errorElement={true}
       />
     </Route>
-    <Route path="/librarians/:id/edit" element={<PrivateRoute />}>
+    <Route path="/librarians/:id/edit" element={<AdminRoute />}>
       <Route
         path="/librarians/:id/edit"
         element={<EditLibrarian />}

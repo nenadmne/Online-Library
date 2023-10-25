@@ -30,7 +30,9 @@ export default function PageNotFound() {
     <div className="not-found">
       <h1> OOPS! </h1>
       <h2> 404 - PAGE NOT FOUND </h2>
-      <p className="sub-text"> Redirecting you back on the previus page in {countdown}...</p>
+      <p className="sub-text">
+        Redirecting you back on the previus page in {countdown}...
+      </p>
     </div>
   );
 }
