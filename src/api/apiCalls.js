@@ -1,4 +1,5 @@
 import axios from "axios";
+
 const url = import.meta.env.VITE_BACKEND_URL;
 
 const libraryApi = axios.create({
@@ -21,17 +22,14 @@ libraryApi.interceptors.request.use(
   }
 );
 
-libraryApi.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    if (error.response.status === 401) {
-      if (window.location.pathname !== "/login") {
-        localStorage.clear();
-        window.location.href = "/login";
-      }
-    }
-    return Promise.reject(error);
-  }
-);
+// libraryApi.interceptors.response.use(
+//   (response) => response,
+//   (error) => {
+//     if (error.response.status === 401) {
+//       window.history.go(-1);
+//     }
+//     return Promise.reject(error);
+//   }
+// );
 
 export default libraryApi;

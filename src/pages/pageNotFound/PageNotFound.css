@@ -1,27 +1,33 @@
-.notFound {
+.not-found {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateY(-25%);
   flex-direction: column;
-  grid-gap: 20px;
 }
-.mainText {
-  font-size: 80px;
+.not-found h1 {
+  font-size: 4rem;
   color: var(--primary);
+  margin: 0.5rem;
 }
-.subText {
-  font-size: 30px;
+.not-found h2 {
+  font-size: 5rem;
+  color: var(--primary);
+  font-weight: lighter;
+  margin: 0.5rem;
 }
-.notFound .homeBtn {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
+.sub-text {
+  font-size: 2rem;
+  color: var(--red);
+  margin: 0.5rem;
 }
-.notFound .homeBtn:hover {
-  opacity: 0.8;
+
+.sub-text span {
+  margin: 0 0.25rem;
+}
+
+.bump {
+  scale: 2;
 }

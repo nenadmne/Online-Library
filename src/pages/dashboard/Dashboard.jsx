@@ -9,6 +9,7 @@ import { LoaderRented } from "../rentingBooks/rentingBooks";
 import "./dashboard.css";
 
 export default function Dashboard() {
+  console.log("Dwadwa");
   const [reservations, setReservations] = useState({
     active: [
       {
@@ -31,6 +32,7 @@ export default function Dashboard() {
   });
 
   const fetchedDataReservation = useLoaderData();
+  console.log(fetchedDataReservation);
 
   useEffect(() => {
     setReservations(fetchedDataReservation);
@@ -69,6 +71,7 @@ export async function reservationLoader() {
   try {
     const response = await libraryApi.get(`/books/reservations`);
     const responseData = response.data.data;
+    console.log(responseData);
     return responseData;
   } catch (error) {
     console.error("Loader function error:", error);
